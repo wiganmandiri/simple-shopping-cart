@@ -105,7 +105,6 @@ export const mainSlice: any = createSlice({
       return state;
     },
     deleted: (state, action) => {
-      // const { name } = action.payload;
       if (_.some(state.cart, idx => idx.id === action.payload.id)) {
         state.cart = _.filter(state.cart, idx => idx.id !== action.payload.id)
       }
